@@ -6,7 +6,7 @@ Game::Game(int nrow, int ncol)
     this->nrow = nrow;
     this->ncol = ncol;
 
-    score_font.loadFromFile("arial.ttf");
+    score_font.loadFromFile("res/arial.ttf");
 
     snake.addNode(Node(11, 9));
     snake.addNode(Node(11, 10));
@@ -19,7 +19,7 @@ void Game::render(sf::RenderWindow &window)
 {
     sf::RectangleShape rect(sf::Vector2f(getWidth(), getHeight()));
     rect.setPosition(sf::Vector2f(0, scoreHeight));
-    rect.setFillColor(sf::Color::Green);
+    rect.setFillColor(sf::Color( 76, 153, 0 ));
     window.draw(rect);
     cherry.render(window, 0, scoreHeight, cellSize);
     snake.render(window, 0, scoreHeight, cellSize);
@@ -27,7 +27,7 @@ void Game::render(sf::RenderWindow &window)
     std::string score_string = "Score: ";
     score_string += std::to_string(score);
     sf::Text text(score_string, score_font, 60);
-    text.setPosition(sf::Vector2f(0, 100));
+    text.setPosition(sf::Vector2f(0, 0));
     window.draw(text);
 }
 

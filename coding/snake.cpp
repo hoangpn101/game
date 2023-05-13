@@ -20,7 +20,7 @@ void Snake::move(Node n)
 void Snake::render(sf::RenderWindow &window, int offsetx, int offsety, int cellSize)
 {
     sf::CircleShape circle(cellSize / 2 - 1);
-    circle.setFillColor(sf::Color::Yellow);
+    circle.setFillColor(sf::Color( 77, 0, 7 ));
     for (const Node& n : nodes) {
         circle.setPosition(sf::Vector2f(
             offsetx + n.col * cellSize,

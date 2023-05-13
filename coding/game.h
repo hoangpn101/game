@@ -8,14 +8,14 @@
 class Game
 {
     int nrow, ncol;
-    int cellSize = 70;
+    int cellSize = 40;
     Cherry cherry;
     Snake snake;
 
     sf::Font score_font;
     
     int score = 0;
-    int scoreHeight = 200;
+    int scoreHeight = 100;
 public:
     Game(int nrow, int ncol);
 

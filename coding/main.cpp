@@ -6,8 +6,7 @@
 int main()
 {
     Game game(20, 20);
-    sf::RenderWindow window(
-        sf::VideoMode(game.getWindowWidth(), game.getWindowHeight()), "Snake!");
+    sf::RenderWindow window(sf::VideoMode(game.getWindowWidth(), game.getWindowHeight()), "SNAKE");
     sf::Clock clock;
     while (window.isOpen())
     {
