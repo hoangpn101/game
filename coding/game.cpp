@@ -19,7 +19,7 @@ void Game::render(sf::RenderWindow &window)
 {
     sf::RectangleShape rect(sf::Vector2f(getWidth(), getHeight()));
     rect.setPosition(sf::Vector2f(0, scoreHeight));
-    rect.setFillColor(sf::Color( 76, 153, 0 ));
+    rect.setFillColor(sf::Color( 76, 175, 80 ));
     window.draw(rect);
     cherry.render(window, 0, scoreHeight, cellSize);
     snake.render(window, 0, scoreHeight, cellSize);
@@ -44,11 +44,9 @@ void Game::step(float dt)
     Node newPos = snake.step(dt);
     if (newPos.row == -1 && newPos.col == -1)
         return;
-    if (newPos.row < 0 || newPos.row >= nrow
-      || newPos.col < 0 || newPos.col >= ncol)
+    if (newPos.row < 0 || newPos.row >= nrow || newPos.col < 0 || newPos.col >= ncol)
         exit(0); // game over
-    if (newPos.row == cherry.getRow() 
-      && newPos.col == cherry.getCol()) {
+    if (newPos.row == cherry.getRow() && newPos.col == cherry.getCol()) {
         snake.addNode(newPos);
         snake.increaseSpeed();
         generate_cherry();

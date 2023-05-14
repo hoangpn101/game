@@ -88,7 +88,7 @@ bool Snake::collideSelf(Node n)
 
 void Snake::increaseSpeed()
 {
-    float factor = exp(1.0/400 * (log(0.05)-log(0.2)));
+    float factor = exp(1.0/50 * (log(0.01)-log(0.2)));
     stepInterval *= factor;
     std::cout << stepInterval << std::endl;
 }

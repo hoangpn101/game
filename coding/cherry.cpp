@@ -8,11 +8,15 @@ Cherry::Cherry(int row, int col)
 
 void Cherry::render(sf::RenderWindow &window, int offsetx, int offsety, int cellSize)
 {
-    sf::CircleShape circle(cellSize / 2);
-    circle.setPosition(sf::Vector2f(
+  sf::Texture texture;
+    texture.loadFromFile("res/cherry.png");
+
+    sf::Sprite cherry(texture);
+
+    cherry.setPosition(sf::Vector2f(
         offsetx + col * cellSize,
         offsety + row * cellSize
     ));
-    circle.setFillColor(sf::Color::Red);
-    window.draw(circle);
+
+    window.draw(cherry);
 }
