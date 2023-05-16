@@ -28,3 +28,16 @@ make
 - Each cherry increase player score by 1 point
 - Snake will die if it bites itselves or hit a wall
 - Snake will increase it speeds more if they eat more cherries
+
+### Features coming soon
+
+- Add more map
+- More costumes for snakes
+- Multiplayer
+- ...
+
+### References
+
+- SFML tutorial
+- Coures Advanced Programming Course INT2215 
+
